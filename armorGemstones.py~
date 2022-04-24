@@ -1,0 +1,11 @@
+import numpy as np
+
+gems = 1
+level = 1
+while level < 5:
+    rng = np.random.rand()
+    if rng < (1-level*0.2):
+        level += 1
+    gems += 1
+
+print(gems)

@@ -1,0 +1,17 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+trials = 100000
+flashWins = 0
+flashMargin = 0
+speeds = np.random.uniform(5, 16, trials)
+for speed in speeds: 
+    margin = 100/10 - 100/speed
+    flashMargin += margin
+    if(speed > 10):
+        flashWins += 1
+#plt.hist(speeds)
+#plt.show()
+
+print("Flash's winning percentage: {}".format(flashWins/trials))
+print("Flash's average margin: {}".format(flashMargin/trials))

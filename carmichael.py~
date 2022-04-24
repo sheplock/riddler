@@ -1,0 +1,14 @@
+abcabc = []
+
+def prime_factorization(n):
+    factors = []
+    i = 2
+    while i*i <= n:
+        if n % i == 0:
+            factors.append(i)
+            n = n // i
+        
+
+for i in range(10):
+    for j in range(10):
+        for k in range(10):
